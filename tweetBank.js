@@ -3,7 +3,8 @@ const _ = require('lodash');
 var data = [];
 
 function add(name, content) {
-  data.push({ name: name, content: content });
+  var id = data.length + 1;
+  data.push({ name: name, content: content, id: id });
 }
 
 function list() {
@@ -33,5 +34,7 @@ const getFakeTweet = function() {
 };
 
 for (let i = 0; i < 10; i++) {
-  module.exports.add( getFakeName(), getFakeTweet() );
+  add( getFakeName(), getFakeTweet() );
 }
+add('claire', 'test tweet');
+add('claire', 'test tweet two');

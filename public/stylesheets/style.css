@@ -25,6 +25,10 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
+li {
+  list-style: none;
+}
+
 #wrap > .container {
   padding: 60px 15px 0;
 }
@@ -53,7 +57,17 @@ code {
 }
 .content {
   margin-left: 60px;
+  padding: 3px;
 }
-.content .by {
+.by {
   font-weight: bold;
+  padding: 0px 3px;
+}
+
+.col-md-9 {
+  padding-bottom: 50px;
+}
+
+form {
+  padding-bottom: 20px;
 }
