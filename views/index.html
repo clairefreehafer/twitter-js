@@ -31,7 +31,7 @@ layout.html is the actual page, this fills in layout.html for the main page
       {% for tweet in tweets %}
       <div class="tweetbox">
         <img />
-        <li class="content by"><a href="/users/{{tweet.name}}">{{tweet.name}}</a></li>
+        <li class="by"><a href="/users/{{tweet.name}}">{{tweet.name}}</a></li>
         <li class="content">{{tweet.content}}</li>
         <li class="content permalink"><a href="/tweets/{{tweet.id}}">View Tweet</a></li>
       </div>

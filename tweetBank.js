@@ -1,14 +1,16 @@
+'use strict';
+
 const _ = require('lodash');
 
-var data = [];
+var data = []; // store tweets
 
 function add(name, content) {
-  var id = data.length + 1;
+  var id = data.length;
   data.push({ name: name, content: content, id: id });
 }
 
 function list() {
-  return _.cloneDeep(data);
+  return _.cloneDeep(data); // makes identical array that is not the orig arr
 }
 
 function find(properties) {
@@ -29,8 +31,8 @@ const getFakeName = function() {
 };
 
 const getFakeTweet = function() {
-  const awesome_adj = ['awesome', 'breathtaking', 'amazing', 'funny', 'sweet', 'cool', 'wonderful', 'mindblowing', 'impressive'];
-  return 'Fullstack Academy is ' + randArrayEl(awesome_adj) + '! The instructors are just so ' + randArrayEl(awesome_adj) + '. #fullstacklove #codedreams';
+  const awesomeAdj = ['awesome', 'breathtaking', 'amazing', 'funny', 'sweet', 'cool', 'wonderful', 'mindblowing', 'impressive'];
+  return 'Fullstack Academy is ' + randArrayEl(awesomeAdj) + '! The instructors are just so ' + randArrayEl(awesomeAdj) + '. #fullstacklove #codedreams';
 };
 
 for (let i = 0; i < 10; i++) {
